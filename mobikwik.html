@@ -16,16 +16,17 @@
     #screen{
         width:90%;
         height:1500px;
-        border:1px solid red;
+        /* border:1px solid red; */
         display: flex;
         /* justify-content: space-between; */
         margin: auto;
         background-color: white;
+        box-shadow: 5px 2px 12px rgb(228, 225, 225);
     }
     #sidebar{
         width:18%;
         height:100%;
-        border:1px solid black;
+        /* border:1px solid black; */
         position: fixed;
         background-color: #002447;
     }
@@ -115,20 +116,24 @@
     #body{
         width:90%;
         height:100%;
-        border:1px solid blue;
+        /* border:1px solid blue; */
         margin-left: 22%;
     }
     #navbar{
         height:60px;
-        width:100%;
-        /* border:1px solid pink; */
+        width:71%;
+        position: fixed;
+        top:0;
+        right:20%;
+        left:24%;
+        background-color: white;
+        margin-bottom: 5px;
     }
     #navbar >div{
         height:100%;
         width:380px;
-        /* border:1px solid black; */
         display: flex;
-        margin-left: 682px;
+        margin-left: 670px;
     }
     #navbar >div > div:nth-child(1){
         width:100px;
@@ -170,10 +175,10 @@
         margin-left: 10px;
     }
     #bodyinfo{
-        height:530px;
+        /* height:800px; */
         width:100%;
-        border:1px solid pink;
-        /* margin-top: 20px; */
+        /* border:5px solid pink; */
+        margin-top:80px;
     } 
     #recharge{
         height:310px;
@@ -181,24 +186,26 @@
         /* border:3px solid green; */
         background-color: #002447;
         color:white;
-        margin-top: -22px;
+        /* margin-top: 300px; */
+        border-radius: 5px;
     }
     #recharge >div:nth-child(1){
         display:flex;
         height:50px;
         margin-top: 20px;
     }
-    #recharge >div:nth-child(1) >p:nth-child(1){
-        font-size: 27px;
+    #recharge >div:nth-child(1) >div:nth-child(1){
+        font-size: 24px;
         margin-top: 20px;
         margin-bottom: 10px;
-        /* width:300px;
-        border:1px solid red; */
+        margin-left: 10px;
+        /* width:500px;
+         border:1px solid red;  */
     }
-    #recharge >div:nth-child(1) >p:nth-child(2){
+    #recharge >div:nth-child(1) >div:nth-child(2){
         font-size: 15px;
         margin-top: 30px;
-        margin-left: 600px;
+        margin-left: 700px;
     }
     #recharge >div:nth-child(2){
         height:102px;
@@ -241,11 +248,13 @@
     #bodyinputs{
         display:flex;
         justify-content: space-evenly;
-        width:100%;
+        width:95%;
+        margin: auto;
         height:106px;
-        border:1px solid black;
+        /* border:1px solid black; */
         margin-top: 10px;
         background-color: white;
+        border-radius: 5px;
     }
     #bodyinputs >div>p{
         margin-top: 10px;
@@ -292,25 +301,80 @@
         padding: 5px;
         height:50px
     }
+    #whatwedo{
+        height:70px;
+        width:100%;
+        /* border:1px solid blue; */
+        margin-top: 20px
+    }
+    #whatwedo >p:nth-child(1){
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #whatwedo >p:nth-child(2){
+        font-size: 15px;
+        margin-top: 5px;
+        color:grey;
+    }
    #mobilerecharge{
- width:100%;
- margin-top: 20px;
- border:1px solid red;
- display: flex;
- justify-content: space-between;
+         width:100%;
+         margin-top: 20px;
+        border-bottom:1px solid grey;
+        display: flex;
+         justify-content: space-between;
    }
    #mobilerecharge > div {
-    width:23%;
-    height:200px;
-    border: 1px solid green;
+        width:23%;
+        height:200px;
+         /* border: 1px solid green; */
    }
-   #mobilerecharge > div >p{
+   #mobilerecharge > div>div:nth-child(2)>h3{
+        margin-top: 10px;
+        font-size: 15px;
+        color:#2083d3;
+        margin-bottom: 5px;
+   }
+   #mobilerecharge > div>div:nth-child(2) >p{
+    font-size: 14px;
+    color:rgb(83, 78, 78);
+   }
+   #mobilerecharge > div >div:nth-child(1){
+    height:40px;
+    width:40px;
+    /* border:1px solid grey; */
+    border-radius: 50px;
+    background-color:#e7effc ;
+    color:blue;
+   }
+   #mobilerecharge > div >div:nth-child(1)>i{
+    font-size: 20px;
+    margin-left: 10px;
     margin-top: 10px;
    }
-
-
-
-    @media screen and (max-width:1080px) {
+   #recharge-para{
+    height:500px;
+    width:100%;
+    /* border:1px solid red; */
+   }
+   #recharge-para >div>h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:rgb(86, 82, 82)
+   }
+   #recharge-para >div>p{
+    font-size: 15px;
+    color:rgb(94, 92, 92);
+   }
+   #recharge-para >div:nth-child(2)>ol{
+    margin-top: 10px;
+   }
+   #recharge-para >div:nth-child(2)>ol>li{
+    font-size: 15px;
+    color:rgb(94, 92, 92);
+    margin-left: 35px;
+    margin-top: 2px;
+   }
+    @media screen and (max-width:1283px) {
         #sidebar{
             display: none;
         }
@@ -322,61 +386,151 @@
         }
         #navbar{
             box-shadow:  2px 2px rgb(250, 249, 252);
+            /* border:1px solid red; */
+            width:81%;
+            margin-left: -120px;
         }
         #navbar >div{
         height:100%;
-        width:380px;
+        margin: auto;
         /* border:1px solid black; */
         display: flex;
-        margin-left: 250px;
         }
+        /* }
          #navbar >div > div:nth-child(2){
         display: none;
+        } */
+        #recharge{
+            height:700px;
+            border-radius: 10px;
+            width:100%;
         }
-        #recharge>div:nth-child(2){
-            position: fixed;
-        }
-      #recharge>div:nth-child(2){
-        border:3px solid yellow;
-        position: fixed;
-      }
-    #recharge >div:nth-child(1) >p:nth-child(2){
-       display:none;
-    }
-    #recharge >div:nth-child(2) >div:nth-child(9){
-        display: none;
-    }
-    #recharge >div:nth-child(2) >div:nth-child(10){
-        display: none;
-    }
         #bodyinputs{
+            height:500px;
+            width:95%;
+            margin: auto;
             display: flex;
             flex-direction: column;
-            height:600px;
-            border:3px solid blue;
-            width:100%;
-            /* margin-top: 300px; */
+            /* border:5px solid red; */
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px;
         }
-        #bodyinputs>div{
-        /* width:100%; */
-        /* height:60px; */
-         /* border:1px solid green; */
-        margin-top: 5px;
-
-    }
-    #bodyinputs>div >input{
-        /* width:100%; */
-    }
-    #mobilerecharge{
+        #bodyinputs >div:nth-child(1){
+            width:100%;
+            height:50px;
+            margin-top: -50px;
+            /* border:1px solid green; */
+        }
+        #bodyinputs >div:nth-child(1) >input{
+            width:100%;
+            margin-top: 10px;
+            border:1px solid grey;
+            border-radius: 10px;
+        }
+        #bodyinputs >div:nth-child(2){
+            width:100%;
+            height:50px;
+            /* border:1px solid green; */
+        }
+        #bodyinputs >div:nth-child(2) >input{
+            width:100%;
+            margin-top: 10px;
+            border:1px solid grey;
+            border-radius: 10px;
+        }
+        #bodyinputs >div:nth-child(3){
+            width:100%;
+            height:50px;
+            /* border:1px solid green; */
+        }
+        #bodyinputs >div:nth-child(3) >input{
+            width:100%;
+            margin-top: 10px;
+            border:1px solid grey;
+            border-radius: 10px;
+        }
+        #bodyinputs >div:nth-child(4){
+            width:100%;
+            height:50px;
+            /* border:1px solid green; */
+        }
+        #bodyinputs >div:nth-child(4) >input{
+            width:100%;
+            margin-top: 10px;
+            border:1px solid grey;
+            border-radius: 10px;
+        }
+        #bodyinputs >div:nth-child(5){
+            width:100%;
+            height:50px;
+        } 
+         #mobilerecharge{
         display: flex;
         flex-direction: column;
-        height:350px;
-    }
-    #mobilerecharge > div{
+        height:280px;
+        /* margin-top: 400px; */
+         }
+         #whatwedo{
+            margin-top: 50px;
+         }
+        #mobilerecharge > div{
         width:100%;
-        height:70px;
+        height:60px;
+        display:flex;
+        /* border: 1px solid green; */
+        margin-bottom: -10px;
+         }
+         #mobilerecharge >div>div:nth-child(2){
+            /* border:2px solid red; */
+            margin-top:-10px;
+            margin-left: 10px;
+            height:60px;
+         }
+         #recharge >div:nth-child(2) >div{
+        width:12%;
+        height:100px;
+        /* border:1px solid green; */
+    } 
+         #bodyinfo{
+            width:100%;
+         }
+     }
+
+     /* @media screen and (max-width:1283px){
+        #sidebar{
+            display: none;
+        }
+     } */
+
+     @media screen and (max-width:1500px){
+        #recharge >div:nth-child(1) >div:nth-child(1){
+       width:100%;
     }
+    #recharge >div:nth-child(1) >div:nth-child(2){
+        display: none;
     }
+    #sidebar{
+        width:18%;
+        height:100%;
+    }
+    #sidebar >div:nth-child(2){
+        height:240px;
+        width:90%;
+        /* border:1px solid green; */
+        margin: auto;
+        color:white;
+
+    }
+    #navbar >div{
+        height:100%;
+        width:380px;
+        margin:auto;
+        /* border:1px solid black; */
+        display: flex;
+        /* margin-left: 250px; */
+        }
+     }
 </style>
 <body>
     <div id="screen">
@@ -449,8 +603,8 @@
             <div id="bodyinfo">
                 <div id="recharge">
                     <div>
-                        <p>Prepaid Mobile Recharge</p>
-                        <p>How it works?</p>
+                        <div><p>Prepaid Mobile Recharge</p></div>
+                        <div><p>How it works?</p></div>
                     </div>
                     <div>
                         <div>
@@ -524,24 +678,62 @@
                         <div><p>GO</p></div>
                     </div>
                 </div>
-             
-            
-            <div id="mobilerecharge">
+              <div id="whatwedo">
+                <p>What We Do</p>
+                <p>Simple, fast and Hassle Free payments</p>
+              </div>
+           
+             <div id="mobilerecharge">
                 <div>
-                    <h3>Phone recharge $ DTH</h3>
-                    <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                    <div><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <div>
+                        <h3>Phone recharge $ DTH</h3>
+                        <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                    </div>
                 </div>
                 <div>
-                    <h3>Phone recharge $ DTH</h3>
-                    <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                    <div><i class="fa-solid fa-bars"></i></div>
+                    <div>
+                        <h3>Bill Payments</h3>
+                        <p>Pay all your bills across categories via MobiKwik in seconds and avoid late payment charges.</p>
+                    </div>
                 </div>
                 <div>
-                    <h3>Phone recharge $ DTH</h3>
-                    <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                    <div><i class="fa-solid fa-store"></i></div>
+                    <div>
+                        <h3>Shopping in Local Stores</h3>
+                        <p>With MobiKwik on your phone, enjoy over 2,50,000+ shopping options and earn big cashbacks and discounts in the process!</p>
+                    </div>
                 </div>
                 <div>
-                    <h3>Phone recharge $ DTH</h3>
-                    <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                    <div><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                    <div>
+                        <h3>Transfer money to Bank</h3>
+                        <p>You can transfer money from Credit card to any Bank Account</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="recharge-para">
+                <div>
+                    <h3>Prepaid Mobile Recharge</h3>
+                    <p>Nowadays, everyone ha s a smartphonr, and the number of smartphone users continues to rise. When it comes to mobile payment plans, users have two options: postpaid or Prepaid. Prepaid mobile plans are those ypou must pay in advance to use them. Customers can choose from a variety of prepaid plans offered by various operators. People looking for budget-friendly options might consider prepaid subscriptions. There are so many options available online to do your prepaid mobile recharge, but MobiKwik is one of the most trustworthy digital payment app to make your life easier. </p>
+                </div>
+                <div>
+                    <h3>How to Make Prepaid Mobile Recharge Online?</h3>
+                    <p>Mobile phones are an intrinsic part of our lives, and so is online mobile recharge. Online rechrge gives you the liberty to recharge your mobile phone number anytime and from anywhere,all you need is an internet connection. So, when you think of easy recharge options with mobile recharge offers, MobiKwik is the best platform to turn to.<br/>You can now carry out your et recahrge and bill payments for any number of your friends and family using MobiKwik. Prepaid mobile plans can be paid through Net BAnking, Debit Card, Credit Card,Visa or mastercard, and MobiKwik wallet.<br/>
+                    <br/>The Process of online recharge is also as simple as it sounds. All you have to do is :-
+                    <ol>
+                        <li>Open the MobiKwik app & under 'Recharge & Bill Pay' section, enter the phone number you want to carry out the online recharge for,</li>
+                        <li>Select the option from Prepaid/ Postpaid.</li>
+                        <li>Select your mobile operator</li>
+                        <li>Select the circle you belong to.</li>
+                        <li>Check the online recharge plans designed exclusively for you or fill the amount you want to recharge.</li>
+                        <li>Enter your mobile number again and put the received OTP.</li>
+                        <li>Complete the online recharge payment.</li>
+                    </ol>
+                
+                </p>
                 </div>
             </div>
         </div>
