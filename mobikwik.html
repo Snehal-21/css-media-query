@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobikwik</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #screen{
+        width:90%;
+        height:1500px;
+        border:1px solid red;
+        display: flex;
+        /* justify-content: space-between; */
+        margin: auto;
+        background-color: white;
+    }
+    #sidebar{
+        width:18%;
+        height:100%;
+        border:1px solid black;
+        position: fixed;
+        background-color: #002447;
+    }
+    #sidebar >div:nth-child(1){
+        width:80%;
+        margin: auto;
+        height:100px;
+    }
+    #sidebar >div:nth-child(1) > img {
+       width:100%;
+       height:100%;
+    }
+    #sidebar >div:nth-child(2){
+        height:240px;
+        width:80%;
+        /* border:1px solid green; */
+        margin: auto;
+        color:white;
+
+    }
+    #sidebar >div:nth-child(2) >div{
+        height:40px;
+        width:100%;
+        /* border:1px solid red; */
+        display: flex;
+        padding-top: 10px;
+    }
+    #sidebar >div:nth-child(2) >div >i{
+        width:15%;
+    }
+    #sidebar >div:nth-child(2) >div >p{
+        width:80%;
+    }
+    #sidebar >div:nth-child(3){
+        color:grey;
+        display: flex;
+        margin-top: 5px;
+        width:90%;
+        margin: auto;
+    } 
+    #sidebar >div:nth-child(3)>div{
+        height:1px;
+        width:300px;
+        border-bottom:1px solid rgb(68, 67, 67);
+        margin-top: 10px;
+        margin-left: 3px;
+    }
+    #sidebar >div:nth-child(4){
+        height:200px;
+        width:80%;
+        /* border:1px solid green; */
+        margin: auto;
+        color:black;
+    }
+    #sidebar >div:nth-child(4) >div{
+        height:40px;
+        width:100%;
+        /* border:1px solid red; */
+        display: flex;
+        padding-top: 10px;
+    }
+    #sidebar >div:nth-child(4) >div >i{
+        width:15%;
+    }
+    #sidebar >div:nth-child(4) >div >p{
+        width:80%;
+    }
+    #sidebar >div:nth-child(4) >div:nth-child(1) >i{
+        color:rgb(87, 241, 87);
+    }
+    #sidebar >div:nth-child(4) >div:nth-child(2) >i{
+        color:orange;
+    }
+    #sidebar >div:nth-child(4) >div:nth-child(3) >i{
+        color:yellow;
+    }
+    #sidebar >div:nth-child(4) >div:nth-child(4) >i{
+        color:green;
+    }
+    #sidebar >div:nth-child(4) >div:nth-child(5) >i{
+        color:blue;
+    }
+    #sidebar >div:nth-child(4) >div >p{
+        /* margin-left: ; */
+        color:white;
+    }
+    #body{
+        width:90%;
+        height:100%;
+        border:1px solid blue;
+        margin-left: 22%;
+    }
+    #navbar{
+        height:60px;
+        width:100%;
+        /* border:1px solid pink; */
+    }
+    #navbar >div{
+        height:100%;
+        width:380px;
+        /* border:1px solid black; */
+        display: flex;
+        margin-left: 682px;
+    }
+    #navbar >div > div:nth-child(1){
+        width:100px;
+        height:60%;
+        border-right:1px solid grey;
+        margin-top: 12px;
+        color: blue;
+        margin-left: 5px;
+        padding-top: 10px;
+    }
+    #navbar >div > div:nth-child(2){
+        width:135px;
+        height:60%;
+        border-right:1px solid grey;
+        margin-top: 12px;
+        color: blue;
+        margin-left: 5px;
+        padding-top: 10px;
+    }
+    #navbar >div > div:nth-child(3){
+        width:65px;
+        height:60%;
+        border-right:1px solid grey;
+        margin-top: 12px;
+        color: blue;
+        margin-left: 5px;
+        padding-top: 10px;
+    }
+    #navbar >div > div:nth-child(4){
+        width:85px;
+        height:60%;
+        /* border-right:1px solid grey; */
+        margin-top: 12px;
+        color: blue;
+        margin-left: 5px;
+        padding-top: 10px;
+    }
+    #navbar >div > div:nth-child(4) >i{
+        margin-left: 10px;
+    }
+    #bodyinfo{
+        height:530px;
+        width:100%;
+        border:1px solid pink;
+        /* margin-top: 20px; */
+    } 
+    #recharge{
+        height:310px;
+        width:100%;
+        /* border:3px solid green; */
+        background-color: #002447;
+        color:white;
+        margin-top: -22px;
+    }
+    #recharge >div:nth-child(1){
+        display:flex;
+        height:50px;
+        margin-top: 20px;
+    }
+    #recharge >div:nth-child(1) >p:nth-child(1){
+        font-size: 27px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        /* width:300px;
+        border:1px solid red; */
+    }
+    #recharge >div:nth-child(1) >p:nth-child(2){
+        font-size: 15px;
+        margin-top: 30px;
+        margin-left: 600px;
+    }
+    #recharge >div:nth-child(2){
+        height:102px;
+        width:100%;
+        /* border:2px solid red; */
+        display: flex;
+        margin-top: 25px;
+    }
+    #recharge >div:nth-child(2) >div{
+        width:10%;
+        height:100px;
+        /* border:1px solid green; */
+    }
+    #recharge >div:nth-child(2) > div >div:nth-child(1){
+        height:50px ;
+        width:50px;
+        /* border:1px solid blue; */
+        margin-left: 26px;
+        border-radius: 50px;
+        background-color: #f0f4fa;
+        color: blue;
+    }
+    #recharge >div:nth-child(2) > div >div:nth-child(1) >i{
+        font-size: 25px;
+        margin-left: 12px;
+        margin-top:12px ;
+    }
+    #recharge >div:nth-child(2) > div >p{
+        margin-top: 10px;
+        text-align: center;
+    }
+    #recharge >div:nth-child(2) > div:nth-child(1) >div:nth-child(3){
+        height:5px;
+        width:80px;
+        background-color: blue;
+        margin-left: 10px;
+        border-radius: 5px;
+        margin-top: 5px;
+    } 
+    #bodyinputs{
+        display:flex;
+        justify-content: space-evenly;
+        width:100%;
+        height:106px;
+        border:1px solid black;
+        margin-top: 10px;
+        background-color: white;
+    }
+    #bodyinputs >div>p{
+        margin-top: 10px;
+        font-size: 15px;
+        color:rgb(91, 88, 88);
+    }
+    #bodyinputs>div:nth-child(1){
+    width:35%;
+    height:100%;
+    /* border:1px solid green; */
+    }
+    #bodyinputs>div:nth-child(2){
+    width:18%;
+    height:100%;
+    /* border:1px solid green; */
+    }
+    #bodyinputs>div:nth-child(3){
+    width:18%;
+    height:100%;
+    /* border:1px solid green; */
+    }
+    #bodyinputs>div:nth-child(4){
+    width:18%;
+    height:100%;
+    /* border:1px solid green; */
+    }
+    #bodyinputs>div:nth-child(5){
+    width:5%;
+    height:48%;
+    /* border:1px solid green; */
+    margin-top: 40px;
+    background-color: #b2b2b2;
+    border-radius: 5px;
+    }
+    #bodyinputs>div:nth-child(5) > p{
+        text-align: center;
+        margin-top: 14px;
+        font-size: 20px;
+        color:white;
+    }
+    #bodyinputs>div >input{
+        width:100%;
+        margin-top: 10px;
+        padding: 5px;
+        height:50px
+    }
+   #mobilerecharge{
+ width:100%;
+ margin-top: 20px;
+ border:1px solid red;
+ display: flex;
+ justify-content: space-between;
+   }
+   #mobilerecharge > div {
+    width:23%;
+    height:200px;
+    border: 1px solid green;
+   }
+   #mobilerecharge > div >p{
+    margin-top: 10px;
+   }
+
+
+
+    @media screen and (max-width:1080px) {
+        #sidebar{
+            display: none;
+        }
+        #body{
+            width:90%;
+            margin: auto;
+            height:1400px;
+            margin-top: 0px;
+        }
+        #navbar{
+            box-shadow:  2px 2px rgb(250, 249, 252);
+        }
+        #navbar >div{
+        height:100%;
+        width:380px;
+        /* border:1px solid black; */
+        display: flex;
+        margin-left: 250px;
+        }
+         #navbar >div > div:nth-child(2){
+        display: none;
+        }
+      #recharge>div:nth-child(2){
+        border:3px solid yellow;
+      }
+    #recharge >div:nth-child(1) >p:nth-child(2){
+       display:none;
+    }
+    #recharge >div:nth-child(2) >div:nth-child(9){
+        display: none;
+    }
+    #recharge >div:nth-child(2) >div:nth-child(10){
+        display: none;
+    }
+        #bodyinputs{
+            display: flex;
+            flex-direction: column;
+            height:600px;
+            border:3px solid blue;
+            width:100%;
+        }
+        #bodyinputs>div{
+        /* width:100%; */
+        /* height:60px; */
+         /* border:1px solid green; */
+        margin-top: 5px;
+
+    }
+    #bodyinputs>div >input{
+        /* width:100%; */
+    }
+    #mobilerecharge{
+        display: flex;
+        flex-direction: column;
+        height:350px;
+    }
+    #mobilerecharge > div{
+        width:100%;
+        height:70px;
+    }
+    }
+</style>
+<body>
+    <div id="screen">
+        <div id="sidebar">
+            <div>
+                <img src="https://zeevector.com/wp-content/uploads/2021/02/Mobikwik-Logo-Vector-White.png"/>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-bolt"></i>
+                    <p>Recharge & Bill Pay</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <p>Transfer to Bank</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-certificate"></i>
+                    <p>Offers & Deals</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Local Stores</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-spinner"></i>
+                    <p>Reedeem Payback Points</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    <p>wallet Transfer</p>
+                </div>
+            </div>
+            <div>
+                <p>Products</p>
+                <div></div>
+            </div>
+            <div>
+                <div>
+                    <i class="fa-solid fa-xmark"></i>
+                    <p>Xtra</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-zipper"></i>
+                    <p>ZIP</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <p>Mutual Funds</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <p>Payment Gateway</p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-handshake"></i>
+                    <p>Become a Partner</p>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="navbar">
+                <div>
+                    <div>What we do?</div>
+                    <div>Help and Support?</div>
+                    <div>Login</div>
+                    <div>Signup<i class="fa-solid fa-user-plus"></i></div>
+                </div>
+            </div>
+            <div id="bodyinfo">
+                <div id="recharge">
+                    <div>
+                        <p>Prepaid Mobile Recharge</p>
+                        <p>How it works?</p>
+                    </div>
+                    <div>
+                        <div>
+                            <div><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <p>Mobile</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-satellite-dish"></i></div>
+                            <p>DTH</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                            <p>Electricity</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-regular fa-credit-card"></i></div>
+                            <p>Credit Card</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-database"></i></div>
+                            <p>Datacard</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-phone"></i></div>
+                            <p>Landline</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-tower-broadcast"></i></div>
+                            <p>Broadband</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-gas-pump"></i></div>
+                            <p>Piped Gas</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-umbrella"></i></div>
+                            <p>Insurance</p>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div><i class="fa-solid fa-plus"></i></div>
+                            <p>More</p>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div id="bodyinputs">
+                        <div>
+                            <p>Mobile Number</p>
+                            <input placeholder="Mobile Number"/>
+                        </div>
+                        <div>
+                            <p>Operator</p>
+                            <input placeholder="Select Oerator"/>
+                        </div>
+                        <div>
+                            <p>Circle</p>
+                            <input placeholder="Select Circle"/>
+                        </div>
+                        <div>
+                            <p>Amount</p>
+                            <input placeholder="Rs. Amount"/>
+                        </div>
+                        <div><p>GO</p></div>
+                    </div>
+                </div>
+             
+            
+            <div id="mobilerecharge">
+                <div>
+                    <h3>Phone recharge $ DTH</h3>
+                    <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                </div>
+                <div>
+                    <h3>Phone recharge $ DTH</h3>
+                    <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                </div>
+                <div>
+                    <h3>Phone recharge $ DTH</h3>
+                    <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                </div>
+                <div>
+                    <h3>Phone recharge $ DTH</h3>
+                    <p>With MOney loaded in your Mobikwik wallet, it takes seconds to make phone and DTH recharges!</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
